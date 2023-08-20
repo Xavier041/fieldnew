@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; 
+    const proxyUrl = 'https://www.proxy-listen.de/Proxy/Proxyliste.html'; 
     const targetUrl = 'http://agro.energomera.ru:3060/api/field?lastChangeDate=2010-08-03T16:47:01.307&skip=90&take=1';
     const info = document.getElementById('info')
     const infoContent = document.getElementById('infoContent')
