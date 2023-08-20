@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     getName();
 
     async function fieldRendering() {
-        const response = await fetch('http://agro.energomera.ru:3060/api/field?lastChangeDate=2010-08-03T16:47:01.307&skip=90&take=1');
+        const response = await fetch('https://agro.energomera.ru:3060/api/field?lastChangeDate=2010-08-03T16:47:01.307&skip=90&take=1');
         const data = await response.json();
         const coordinates = JSON.parse(data[0].Location);
         const latitude = coordinates.Center[0];
