@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; 
+    const targetUrl = 'http://agro.energomera.ru:3060/api/field?lastChangeDate=2010-08-03T16:47:01.307&skip=90&take=1';
     const info = document.getElementById('info')
     const infoContent = document.getElementById('infoContent')
     let organizationId1;
@@ -24,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     getName();
 
     async function fieldRendering() {
-        const response = await fetch('https://agro.energomera.ru:3060/api/field?lastChangeDate=2010-08-03T16:47:01.307&skip=90&take=1');
+        
+        const response = await fetch(proxyUrl + targetUrl);
         const data = await response.json();
         const coordinates = JSON.parse(data[0].Location);
         const latitude = coordinates.Center[0];
